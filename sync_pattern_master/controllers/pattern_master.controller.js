@@ -1,4 +1,4 @@
-import ZAWS_JC_SRV_PATMST from "../models/JKDataModel/ZAWS_JC_SRV_PAT_MST.js";
+import ZAWS_JC_SRV_PATMST from "../models/ZAWS_JC_SRV_PAT_MST.js";
 import axios from "axios";
 import SyncLog from "../models/sync_log.model.js";
 
