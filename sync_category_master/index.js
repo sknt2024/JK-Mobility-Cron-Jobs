@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import { runSyncPatternMaster } from "./jobs/sync_pattern_master.js";
+import { runSyncCategoryMaster } from "./jobs/sync_category_master.js";
 
 dotenv.config();
 
@@ -44,7 +44,7 @@ async function connectWithRetry(maxRetries = 5) {
 }
 
 async function main() {
-  console.log(`Starting sync_pattern_master | NODE_ENV=${process.env.NODE_ENV || "dev"}`);
+  console.log(`Starting sync_category_master | NODE_ENV=${process.env.NODE_ENV || "dev"}`);
 
   try {
     await connectWithRetry(parseInt(process.env.MONGO_CONNECT_MAX_RETRIES || "5", 10));
@@ -55,7 +55,7 @@ async function main() {
     }
 
     // Run the job
-    await runSyncPatternMaster();
+    await runSyncCategoryMaster();
 
     console.log("✅ Sync completed successfully");
     // Close DB connection gracefully

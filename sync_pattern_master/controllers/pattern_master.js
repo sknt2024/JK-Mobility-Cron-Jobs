@@ -4,7 +4,7 @@ import SyncLog from "../models/sync_log.model.js";
 
 export const syncPatternMaster = async (req, res, next) => {
   const syncLogEntry = await SyncLog.create({
-    action: req?.query?.eventCode ?? "sync_brands",
+    action: req?.query?.eventCode ?? "sync_pattern_master",
     initiatedBy: req?.user?._id,
   });
   try {

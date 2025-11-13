@@ -1,7 +1,7 @@
 {
-  "name": "sync_pattern_master",
+  "name": "sync_category_master",
   "version": "1.0.0",
-  "description": "Service to sync pattern master data.",
+  "description": "Service to sync category master data.",
   "type": "module",
   "main": "index.js",
   "scripts": {
