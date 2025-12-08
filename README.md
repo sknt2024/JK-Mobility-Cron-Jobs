@@ -10,4 +10,4 @@
 - [x] Sync Customer Hubs
 - [ ] Sync Vendors (Retreaders)
 - [x] Sync Territories
-- [ ] Sync Tube Mapping
+- [x] Sync Tube Mapping
