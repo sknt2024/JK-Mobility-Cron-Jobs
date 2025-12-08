@@ -1,4 +1,4 @@
-import { syncPatternMaster } from '../controllers/pattern_master.js';
+import { syncPatternMaster } from '../controllers/pattern_master.controller.js';
 
 let running = false;
 
