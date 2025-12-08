@@ -1,4 +1,4 @@
-import { syncCategoryMaster } from '../controllers/category_master.js';
+import { syncCategoryMaster } from '../controllers/category_master.controller.js';
 
 let running = false;
 

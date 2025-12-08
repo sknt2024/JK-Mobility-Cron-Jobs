@@ -18,21 +18,21 @@ export const syncCategoryMaster = async (req, res, next) => {
         },
       });
       categoryResponse.data.d.results.forEach(async (value, index) => {
-          let emp = await ZAWS_JC_SRV_CATMST.findOneAndUpdate(
-            { CatCode: value.CatCode },
-            {
-              Mandt: value.Mandt,
-              CatCode: value.CatCode,
-              Ydesc: value.Ydesc,
-              CompInd: value.CompInd,
-              Division: value.Division,
-              SymId: value.SymId,
-              SelectionGrouping: value.SelectionGrouping,
-              DashboardGrouping: value.DashboardGrouping,
-              deleted: false,
-            },
-            { upsert: true }
-          );
+        let emp = await ZAWS_JC_SRV_CATMST.findOneAndUpdate(
+          { CatCode: value.CatCode },
+          {
+            Mandt: value.Mandt,
+            CatCode: value.CatCode,
+            Ydesc: value.Ydesc,
+            CompInd: value.CompInd,
+            Division: value.Division,
+            SymId: value.SymId,
+            SelectionGrouping: value.SelectionGrouping,
+            DashboardGrouping: value.DashboardGrouping,
+            deleted: false,
+          },
+          { upsert: true }
+        );
 
         if (index + 1 == categoryResponse.data.d.results.length) {
           if (syncLogEntry) {
@@ -48,7 +48,7 @@ export const syncCategoryMaster = async (req, res, next) => {
     if (syncLogEntry) {
       await SyncLog.findByIdAndUpdate(syncLogEntry._id, {
         $set: { status: "failed" },
-        error: error,
+        errorMessages: error,
       });
     }
     error.statusCode = error?.statusCode ?? 400;

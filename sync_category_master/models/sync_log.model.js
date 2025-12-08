@@ -12,12 +12,12 @@ const SyncLogSchema = new mongoose.Schema(
             required: true,
             default: "pending",
         },
-        errors: {
+        errorMessages: {
             type: Object,
             default: []
         },
         action: {
-            type: String, 
+            type: String,
             default: ""
         }
     },
