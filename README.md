@@ -6,8 +6,8 @@
 - [ ] Sync Size Master
 - [ ] Sync Price Details Master
 - [x] Sync Product Master
-- [ ] Sync Customer Fleets
-- [ ] Sync Customer Hubs
+- [x] Sync Customer Fleets
+- [x] Sync Customer Hubs
 - [ ] Sync Vendors (Retreaders)
 - [ ] Sync Territories
 - [ ] Sync Tube Mapping
