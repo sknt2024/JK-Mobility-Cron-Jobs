@@ -9,5 +9,5 @@
 - [x] Sync Customer Fleets
 - [x] Sync Customer Hubs
 - [ ] Sync Vendors (Retreaders)
-- [ ] Sync Territories
+- [x] Sync Territories
 - [ ] Sync Tube Mapping
